@@ -6,5 +6,5 @@ COPY . .
 RUN npm run build 
 
 FROM nginx:alpine as prdo-step
-COPY --from=build-step /app/dist/SERVERAPP /usr/share/nginx/html
+COPY --from=build-step /app/dist/serverapp /usr/share/nginx/html
 EXPOSE 80
